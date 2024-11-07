@@ -4,6 +4,7 @@ import { RiEBike2Line, RiMessageLine } from "react-icons/ri";
 import Cards from "../Components/Cards";
 import { BiMessageAltDetail } from "react-icons/bi";
 import ProductsData from "../Components/ProductsData";
+import StorePerformances from "../Components/StorePerformances";
 
 const cardData = [
   { icon: <BsCart3 />, text: "New order", count: 5, bg: "#55AAF1" },
@@ -15,11 +16,12 @@ const cardData = [
 const Dashboard = () => {
   return (
     <>
-      <div className="w-full bg-[#E1E1E1] py-10 px-5">
+      <div className="w-full bg-[#f0efef] py-10 px-5">
         {/* Cards Section */}
         <div className=" grid grid-cols-4 gap-4">
           {cardData.map((datum, index) => (
             <Cards
+              key={index}
               icon={datum.icon}
               text={datum.text}
               count={datum.count}
@@ -30,6 +32,9 @@ const Dashboard = () => {
 
         {/* Products Data */}
         <ProductsData />
+
+        {/* Store Performances */}
+        <StorePerformances />
       </div>
     </>
   );
