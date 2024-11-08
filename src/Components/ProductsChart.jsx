@@ -6,8 +6,7 @@ import {
   Legend,
   ResponsiveContainer,
   Tooltip,
-  XAxis,
-  YAxis,
+  XAxis
 } from "recharts";
 
 const data = [
