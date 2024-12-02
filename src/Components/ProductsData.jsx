@@ -21,7 +21,7 @@ const ProductsData = () => {
         {/* Chart and Chart Data */}
         <div className="flex border-t-2">
           {/* Chart Data */}
-          <div className="">
+          <div className="flex items-between">
             <div className="w-40 mt-2">
               {productData.map((datum, index) => (
                 <div key={index} className="py-2">
@@ -35,13 +35,15 @@ const ProductsData = () => {
             </div>
 
             {/* TopAds Toggle Button */}
-            <div className="absolute right-4 top-16 flex gap-3">
+            <div className="absolute right-4 flex gap-3">
               <span className="text-sm font-semibold">TopAds Change</span>
               <div>
-                <input type="checkbox" id="check" className=" peer " />
+                <input type="checkbox" id="check" className="peer hidden" />
                 <label
                   htmlFor="check"
-                  className="relative px-4 rounded-full bg-[#E2E2EA] peer-checked:bg-[#20096d] cursor-pointer  before:absolute before:h-[15px] before:w-[15px] before:left-0.5 before:top-[3px] before:rounded-full before:bg-white before:translate-x-0 before:peer-checked:translate-x-[20px] before:duration-[0.6s]"
+                  className="relative inline-block w-[40px] h-[20px] rounded-full bg-[#E2E2EA] peer-checked:bg-[#20096d] cursor-pointer
+               before:absolute before:content-[''] before:h-[15px] before:w-[15px] before:left-0.5 before:top-[2.5px] 
+               before:rounded-full before:bg-white before:translate-x-0 before:peer-checked:translate-x-[20px] before:transition-transform before:duration-300"
                 ></label>
               </div>
             </div>

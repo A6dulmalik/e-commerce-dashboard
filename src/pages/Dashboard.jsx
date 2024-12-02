@@ -16,7 +16,7 @@ const cardData = [
 const Dashboard = () => {
   return (
     <>
-      <div className="w-full bg-[#f0efef] py-10 px-5">
+      <div className="w-full bg-[#f1f0f0] py-10 px-5">
         {/* Cards Section */}
         <div className=" grid grid-cols-4 gap-4">
           {cardData.map((datum, index) => (
