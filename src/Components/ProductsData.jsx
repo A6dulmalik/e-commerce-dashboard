@@ -11,7 +11,7 @@ const productData = [
 const ProductsData = () => {
   return (
     <>
-      <div className="relative bg-white rounded-md px-4 py-4 mt-6 font-mullish">
+      <div className="relative bg-white rounded-md px-4 py-4 mt-6 font-mullish h-[400px]">
         {/* Heading */}
         <div className="flex justify-between items-center mb-3">
           <h2 className="font-bold">Products Data</h2>
@@ -19,10 +19,10 @@ const ProductsData = () => {
         </div>
 
         {/* Chart and Chart Data */}
-        <div className="flex border-t-2">
+        <div className="relative border-t-2">
           {/* Chart Data */}
-          <div className="flex items-between">
-            <div className="w-40 mt-2">
+          <div className="absolute flex justify-between w-full mt-3">
+            <div className="w-40 mt-">
               {productData.map((datum, index) => (
                 <div key={index} className="py-2">
                   <div className="text-xs font-medium">{datum.label}</div>
@@ -35,7 +35,7 @@ const ProductsData = () => {
             </div>
 
             {/* TopAds Toggle Button */}
-            <div className="absolute right-4 flex gap-3">
+            <div className="flex">
               <span className="text-sm font-semibold">TopAds Change</span>
               <div>
                 <input type="checkbox" id="check" className="peer hidden" />
@@ -50,7 +50,9 @@ const ProductsData = () => {
           </div>
 
           {/*Chart  */}
-          <ProductsChart />
+          <div className="ml-48 top-0 right-0 border">
+            <ProductsChart />
+          </div>
         </div>
       </div>
     </>

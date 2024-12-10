@@ -6,7 +6,7 @@ import {
   Legend,
   ResponsiveContainer,
   Tooltip,
-  XAxis
+  XAxis,
 } from "recharts";
 
 const data = [
@@ -66,7 +66,7 @@ const CustomLegend = (props) => {
 
 const ProductsChart = () => {
   return (
-    <ResponsiveContainer width="100%" height={300}>
+    <ResponsiveContainer width={800} height={320}>
       <BarChart
         data={data}
         barSize={9}
